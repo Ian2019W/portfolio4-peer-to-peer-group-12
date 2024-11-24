@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css"> <!-- Ensure the stylesheet link is correct -->
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Ian</a>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p><span></span></p>
+                <h1>Hi, I'm <span>Ian</span><br>PLP Academy student<br>from Kenya</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container"> <!-- Ensure the class name is correct -->
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/codefather.jpg" alt="About Me Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, porro. Ex doloremque magni perferendis laboriosam repudiandae deleniti ullam impedit quos veniam. Corrupti sed officiis perferendis facilis nihil? Unde, quaerat sunt!</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('interests')">Interests</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('programming-languages')">Programming Languages</p> <!-- Ensure the case is correct -->
+                    </div>
+                    <div class="tab-contents active-tab" id="interests">
+                        <ul>
+                            <li><span>Web Development</span><br>Building and exploring different Web applications</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps for fun</li>
+                            <li><span>Coding Challenges</span><br>Problem solving on platforms like LeetCode, HackerRank etc...</li>
+                            <li><span>Graphic Design</span><br>Efficient in Adobe Illustrator, Photoshop etc...</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024 - current</span><br>Software Development at PLP Academy</li>
+                            <li><span>2022 - 2023</span><br>Computer Packages and Graphic Design at Startop College</li>
+                            <li><span>2019 - 2022</span><br>Kiriani Boys High School</li>
+                            <li><span>2016 - 2018</span><br>Enezer Premier School</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="programming-languages">
+                        <ul>
+                            <li><span>Python Programming</span></li>
+                            <li><span>JavaScript</span></li>
+                            <li><span>Java</span></li>
+                            <li><span>C</span></li>
+                            <li><span>C++</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title"><span>Contact me</span></h1>
+                    <p><span>Email</span> : wangunyuian@gmail.com</p>
+                    <p><span>Phone number</span> : 0702684414</p>
+                </div>
+                <a href="images/Ian.pdf" download class="btn btn2">Download CV</a>
+                <div class="contact-right"></div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright @Ian. My Portfolio</p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
